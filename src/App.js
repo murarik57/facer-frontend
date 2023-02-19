@@ -6,19 +6,14 @@ import "./App.css";
 import Rank from "./components/Rank";
 import ParticlesBg from "particles-bg";
 import { useCallback, useState } from "react";
-// import Clarifai from "clarifai";
 import Signin from "./components/auth/Signin";
 import Signup from "./components/auth/Signup";
-
-// const app = new Clarifai.App({
-//   apiKey: "6ebcef4be1e64b178aaf15cbe110afa3",
-// });
 
 const App = () => {
   const [state, setState] = useState({
     input: "",
     box: {},
-    route: "signin",
+    route: "home",
   });
 
   const handleChange = useCallback(
@@ -84,9 +79,9 @@ const App = () => {
 
       {state?.route === "home" ? (
         <>
-          <Navigation onRouteChange={onRouteChange} />
+          {/* <Navigation onRouteChange={onRouteChange} /> */}
           <Logo />
-          <Rank />
+          {/* <Rank /> */}
           <ImageLinkForm handleChange={handleChange} onSubmit={onSubmit} />
           <FaceRecognition box={state?.box} imageUrl={state?.input} />
         </>
