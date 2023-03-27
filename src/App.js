@@ -75,7 +75,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <ParticlesBg type="cobweb" bg={true} num={150} />
+      <ParticlesBg type="tadpole" bg={true} num={150} />
 
       {state?.route === "home" ? (
         <>
